@@ -36,4 +36,4 @@ if __name__ == "__main__":
     data = raw_input('Enter the term to be scraped')
     down(driver,lookup(driver,data))
     time.sleep(15)
-    #driver.quit()
+    driver.quit()
