@@ -41,7 +41,7 @@ class QuotesSpider(scrapy.spiders.Spider):
          if len(temp) == 1:
              max_page = temp[0].split(' ')[-1]
              pages = int( "".join(max_page.split(',')))
-             for i in range(1,5):
+             for i in range(1,pages):
                  url = response.url + "&page="+str(i)
                 #  print url
                  yield scrapy.Request(url=url, callback=self.parse_data)
